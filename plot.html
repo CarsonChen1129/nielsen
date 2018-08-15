@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bar Chart</title>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Import custom css-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Jiajun Chen"/>
+    </head>
+    <body>
+    <div class="row">
+        <div class="col s6">
+            <div class="card">
+                <div class="card-content">
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" id="data">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="card">
+                <div class="card-content">
+                    <div id="drop_zone">Drop files here</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="card">
+                <div class="card-title">
+                    <button class="btn waves-block waves-effect right" id="refresh">Refresh</button>
+                    <form class="right">
+                        <div class="input-field s6">
+                            <input id="graph-title" placeholder="Bar Graph Title">
+                            <label class="active" for="graph-title">Graph Title</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-content">
+                    <blockquote>Bar Chart</blockquote>
+                    <canvas id="data-canvas" height="400" width="800" style="margin:auto;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Import Javascript scripts-->
+    <script type="text/javascript" src="js/papaparse.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
